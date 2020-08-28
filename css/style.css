@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+* {
+    font-size: 25px;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    line-height: 4rem;
+    background-color: gray;
+    margin-left: 4rem;
+    margin-right: 1rem;
+}
+
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background-color: rgb(236 189 189);
+    padding: 1rem;
+    border-bottom: white solid 0.8rem;
+}
+
+section h1 {
+    text-align: center;
+}
+
+section p {
+    line-height: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+/* aqui trato do scroll bar  */
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(26, 26, 65);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(201, 187, 187);
+}
+
+main {
+    margin-left: 3rem;
+    padding: 1rem;
+}
+
+.nav-left {
+    width: 3rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgb(26, 26, 65);
+    transition: 300ms ease-in;
+}
+
+.nav-left-bar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-left-item {
+    width: 100%;
+}
+
+.nav-left-item i {
+    margin-left: 8px;
+    color: white;
+}
+
+.nav-left-item:last-child {
+    margin-top: auto;
+}
+
+.nav-left-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: white;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.8);
+    padding: 0.7rem;
+}
+
+.link-text {
+    /* display: none; */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.nav-left:hover {
+    width: 10rem;
+}
+
+.nav-left:hover .link-text {
+    /* display: block; */
+    opacity: 1;
+}
+
+.nav-left-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background-color: rgb(241, 179, 62);
+}
+
+.nav-left-link.active {
+    background-color: rgb(0, 0, 0);
+}
+
+.footer {
+    line-height: 1rem;
+    background-color: rgb(241, 179, 62);
+    ;
+    text-align: center;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+/* small screens - colocar a navbar no fundo. */
+
+@media only screen and (max-width: 600px) {
+    .nav-left:hover {
+        width: 3rem;
+    }
+    .nav-left .link-text {
+        display: none;
+    }
+    .nav-left {
+        /* width: 100vh;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; */
+    }
+}
