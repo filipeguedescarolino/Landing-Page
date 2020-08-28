@@ -37,7 +37,7 @@ section p {
 }
 
 
-/* aqui trato do scroll bar  */
+/* here we customize the scroll bar */
 
 body::-webkit-scrollbar {
     width: 0.5rem;
@@ -55,6 +55,9 @@ main {
     margin-left: 3rem;
     padding: 1rem;
 }
+
+
+/* we start customizing the navbar */
 
 .nav-left {
     width: 3rem;
@@ -98,19 +101,20 @@ main {
 }
 
 .link-text {
-    /* display: none; */
     margin-left: 1rem;
     margin-right: 1rem;
     opacity: 0;
     transition: opacity 1s;
 }
 
+
+/* the hover property expands the navbar*/
+
 .nav-left:hover {
     width: 10rem;
 }
 
 .nav-left:hover .link-text {
-    /* display: block; */
     opacity: 1;
 }
 
@@ -125,28 +129,28 @@ main {
 
 .footer {
     line-height: 1rem;
-    background-color: rgb(241, 179, 62);
-    ;
-    text-align: center;
+    background-color: rgb(200 198 193);
     height: 2rem;
     margin-bottom: 1rem;
+    margin-left: 4rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 3px;
 }
 
 
-/* small screens - colocar a navbar no fundo. */
+/* we use the @media so the browser will be read in smaller devices */
 
+
+}
 @media only screen and (max-width: 600px) {
     .nav-left:hover {
         width: 3rem;
     }
+    
     .nav-left .link-text {
         display: none;
-    }
-    .nav-left {
-        /* width: 100vh;
-        height: 5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center; */
     }
 }
