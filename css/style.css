@@ -3,6 +3,10 @@
     font-size: 25px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .title {
     font-size: 2rem;
     text-align: center;
@@ -20,10 +24,14 @@ body {
     padding: 0;
 }
 
+.toggle-nav {
+    color: white;
+    padding: 25px;
+}
+
 section {
     background-color: rgb(236 189 189);
     padding: 1rem;
-    border-bottom: white solid 0.8rem;
 }
 
 section h1 {
@@ -34,6 +42,10 @@ section p {
     line-height: 2rem;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
+}
+
+.active-section {
+    border: solid brown 21px;
 }
 
 
@@ -110,11 +122,7 @@ main {
 
 /* the hover property expands the navbar*/
 
-.nav-left:hover {
-    width: 10rem;
-}
-
-.nav-left:hover .link-text {
+.nav-left.expanded-nav .link-text {
     opacity: 1;
 }
 
@@ -140,17 +148,22 @@ main {
     letter-spacing: 3px;
 }
 
+.nav-left.expanded-nav {
+    width: 9rem;
+}
+
 
 /* we use the @media so the browser will be read in smaller devices */
 
-
-}
 @media only screen and (max-width: 600px) {
-    .nav-left:hover {
+    .toggle-nav {
+        display: block;
+    }
+    .nav-left {
         width: 3rem;
     }
-    
-    .nav-left .link-text {
-        display: none;
+    section p {
+        font-size: 0.6rem;
+        line-height: 1rem;
     }
 }
