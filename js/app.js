@@ -7,8 +7,9 @@ const sections = document.querySelectorAll("section");
 const navItemContainer = document.querySelector("#left-nav-item-container");
 
 function createNav() {
-    // Create Nav item dynamically
+    // Create Nav item dynamically.
     let linkHTML = "";
+
     sections.forEach((section) => {
         linkHTML += `
         <ul class="nav-left-bar">
@@ -23,6 +24,7 @@ function createNav() {
         </ul>
         `;
     });
+
     // Adding the dynamically created Nav items inside Nav item container div
     navItemContainer.innerHTML = linkHTML;
 }
@@ -39,7 +41,7 @@ function init() {
     document.addEventListener("scroll", () => {
         /* scrollValue allow us to know where we are in the page (y chart) */
 
-        let scrollValue = window.scrollY + 10;
+        let scrollValue = window.scrollY + 20;
 
         navLinks.forEach((link) => {
             /* this function estabilishes the position in the section and makes the hover active or inactive in the 4 links */
