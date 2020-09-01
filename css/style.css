@@ -1,20 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
-* {
-    font-size: 25px;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 30px;
     text-align: center;
     color: black;
-    line-height: 4rem;
+    line-height: 60px;
     background-color: gray;
-    margin-left: 4rem;
-    margin-right: 1rem;
+    margin-left: 60px;
+    margin-right: 15px;
 }
 
 body {
@@ -31,7 +27,7 @@ body {
 
 section {
     background-color: rgb(236 189 189);
-    padding: 1rem;
+    padding: 15px;
 }
 
 section h1 {
@@ -39,9 +35,10 @@ section h1 {
 }
 
 section p {
-    line-height: 2rem;
+    line-height: 30px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
+    font-size: 23px;
+    margin-top: 20px;
 }
 
 .active-section {
@@ -52,7 +49,7 @@ section p {
 /* here we customize the scroll bar */
 
 body::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 7.5px;
 }
 
 body::-webkit-scrollbar-track {
@@ -64,15 +61,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-    margin-left: 3rem;
-    padding: 1rem;
+    margin-left: 45px;
+    padding: 15px;
 }
 
 
 /* we start customizing the navbar */
 
 .nav-left {
-    width: 3rem;
+    width: 45px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -96,6 +93,7 @@ main {
 .nav-left-item i {
     margin-left: 8px;
     color: white;
+    align-items: center;
 }
 
 .nav-left-item:last-child {
@@ -105,16 +103,16 @@ main {
 .nav-left-link {
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: 75px;
     color: white;
     text-decoration: none;
     filter: grayscale(100%) opacity(0.8);
-    padding: 0.7rem;
+    padding: 10px;
 }
 
 .link-text {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 15px;
+    margin-right: 15px;
     opacity: 0;
     transition: opacity 1s;
 }
@@ -136,12 +134,12 @@ main {
 }
 
 .footer {
-    line-height: 1rem;
+    line-height: 15px;
     background-color: rgb(200 198 193);
-    height: 2rem;
-    margin-bottom: 1rem;
-    margin-left: 4rem;
-    margin-right: 1rem;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-left: 60px;
+    margin-right: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,21 +147,22 @@ main {
 }
 
 .nav-left.expanded-nav {
-    width: 9rem;
+    width: 150px;
 }
 
 
-/* we use the @media so the browser will be read in smaller devices */
+/* we use the @media so the browser will be read in smaller devices. */
 
 @media only screen and (max-width: 600px) {
     .toggle-nav {
         display: block;
     }
     .nav-left {
-        width: 3rem;
+        width: 40px;
+        margin-right: 15px;
     }
     section p {
-        font-size: 0.6rem;
-        line-height: 1rem;
+        font-size: 9px;
+        line-height: 15px;
     }
 }
