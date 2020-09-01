@@ -2,7 +2,7 @@
 
 ## this project will be focused in javascript and the main purpose is to apply some javascript functions and build a responsive navbar. 
 
- document.addEventListener("scroll", () => {
+ *document.addEventListener("scroll", () => {
         
         let scrollValue = window.scrollY + 20;
 
@@ -21,9 +21,9 @@
                 section.classList.remove("active-section");
             }
         });
-# this function analyses the position on the y vector value and pinpoints the position of the sections and hovers the content in the navbar. There are 2 conditions in the function and we use the section.offsetTop and section.offsetHeight to determine wether the mouse button is passing in the section. If true, the section is highlithed otherwise it wont.
+ **this function analyses the position on the y vector value and pinpoints the position of the sections and hovers the content in the navbar. There are 2 conditions in the function and we use the section.offsetTop and section.offsetHeight to determine wether the mouse button is passing in the section. If true, the section is highlithed otherwise it wont.
 
-function createNav() {
+*function createNav() {
     // Create Nav item dynamically
     let linkHTML = "";
 
@@ -42,8 +42,8 @@ function createNav() {
         `;
     });
 
-    // Adding the dynamically created Nav items inside Nav item container div
     navItemContainer.innerHTML = linkHTML;
     
- # this function creates dinamically the navbar. The var "linkHTML" will be filled with the section elements. The "+=" allow us to do the loop 4 times and store the 4 different values in the var. the section.id, section.dataset.icon and section.dataset are defined in the index.html and will create the remaining elements in the navbar.
+** this function creates dinamically the navbar. The var "linkHTML" will be filled with the section elements. The "+=" allow us to do the loop 4 times and store the 4 different values in the var. the section.id, section.dataset.icon and section.dataset are defined in the index.html and will create the remaining elements in the navbar.
+Then we use the innerHTML, to introduce the new var "linkHTML" into the index.html file.
       
